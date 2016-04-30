@@ -1,3 +1,35 @@
 /*
 * Rules Catalog Styles
 */
+.rule-categories {
+    color: rgba(0,0,0,.86);
+}
+.head-title h3{
+  text-transform: capitalize;
+}
+.list-unstyled li {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+h2.rules {
+    padding-top: 50px;
+    padding-bottom: 45px;
+}
+h2.rules span:first-child {
+    margin: 0;
+    color: #000;
+    font-size: 35px;
+}
+h2.rules span {
+  font-size: 14px;
+  color: rgba(0,0,0,.86);
+}
+
+.try-banner{
+  background-color: #FFFFFF;
+}
+
+footer.site-footer {
+  background-color: #F5F7F9;
+}

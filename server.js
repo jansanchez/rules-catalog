@@ -12,6 +12,15 @@ app.get('/', (request, response) => {
 	response.sendFile('index.html');
 });
 
+app.get('/rules', (request, response) => {
+	response.type('application/json');
+	response.sendFile(`${staticPath}static/json/rules_catalog.json`);
+});
+
+app.get('/rules/:id', (request, response) => {
+	response.send(request.params.id);
+});
+
 app.listen(port, () => {
 	console.log(`Server listening on: http://localhost:${port}`);
 });
