@@ -4,21 +4,23 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const staticPath = `${__dirname}/public/`;
+const publicPath = `${__dirname}/public/`;
 
-app.use(express.static(staticPath));
+app.use(express.static(publicPath));
 
 app.get('/', (request, response) => {
-	response.sendFile('index.html');
+	app.set('view engine', 'ejs');
+	response.render('index', { });
 });
 
 app.get('/rules', (request, response) => {
 	response.type('application/json');
-	response.sendFile(`${staticPath}static/json/rules_catalog.json`);
+	response.sendFile(`${publicPath}static/json/rules_catalog.json`);
 });
 
 app.get('/rules/:id', (request, response) => {
-	response.send(request.params.id);
+	app.set('view engine', 'ejs');
+	response.render('rule', { id:request.params.id });
 });
 
 app.listen(port, () => {

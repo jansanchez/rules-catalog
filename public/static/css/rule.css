@@ -1,0 +1,56 @@
+/*
+* Rule Styles
+*/
+.rule {
+    color: rgba(0,0,0,.86);
+}
+.rule h3{
+  color: #202020;
+}
+.rule h3.second{
+  margin-top: 35px;
+}
+.rule section{
+  background-color: #FFFFFF;
+  color: #757575;
+  padding: 30px 0 40px 0;
+}
+.rule section.gray-light{
+  background-color: #f5f7f9;
+  color: #707172;
+}
+.rule .code {
+  padding-top: 15px;
+}
+.rule pre code {
+    font-size: inherit;
+    border: none;
+    border-radius: 0;
+}
+.rule header.site-header {
+    background-color: #FFFFFF;
+}
+
+.rule .jumbotron {
+  padding-top: 45px;
+}
+.rule .jumbotron h1{
+    color: #212121;
+}
+.rule .jumbotron p{
+    color: #757575;
+}
+
+.rule hr{
+  background-color: #dee5eb;
+  margin-top: 10px;
+}
+
+footer.site-footer {
+  background-color: #F5F7F9;
+}
+
+p.undefined {
+  color: #4b4b4d;
+  background-color: #f5f7f9;
+}

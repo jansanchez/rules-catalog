@@ -1,6 +1,7 @@
 module.exports = {
   entry: {
-    index: ['./source/js/index.jsx']
+    index: ['./source/js/index.jsx'],
+    rule: ['./source/js/rule.jsx']
   },
   output: {
     path: './public/static/js/',
