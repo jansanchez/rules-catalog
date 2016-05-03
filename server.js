@@ -1,28 +1,24 @@
 #!/usr/bin/env node
 'use strict';
 
-const express = require('express');
+import path from 'path';
+import express from 'express';
+import engine from 'react-engine';
+
+const config = require('./configuration');
+
 const app = express();
-const port = 3000;
-const publicPath = `${__dirname}/public/`;
+app.use(express.static(path.join(__dirname, 'public/')));
 
-app.use(express.static(publicPath));
+app.engine('.jsx', engine.server.create());
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jsx');
+app.set('view', engine.expressView);
 
-app.get('/', (request, response) => {
-	app.set('view engine', 'ejs');
-	response.render('index', { });
+app.get('/', (req, res) => {
+  res.render('index', {title: 'Rules Catalog', subtitle: 'References and documentation by Categories'});
 });
 
-app.get('/rules', (request, response) => {
-	response.type('application/json');
-	response.sendFile(`${publicPath}static/json/rules_catalog.json`);
-});
-
-app.get('/rules/:id', (request, response) => {
-	app.set('view engine', 'ejs');
-	response.render('rule', { id:request.params.id });
-});
-
-app.listen(port, () => {
-	console.log(`Server listening on: http://localhost:${port}`);
+app.listen(config.port, () => {
+  console.log(`Server running in localhost:${config.port}`);
 });

@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-class Title extends React.Component {
+export default class Title extends React.Component {
     render() {
         return (<div className="head-title">
                     <h3>{this.props.name}</h3>
@@ -9,4 +8,3 @@ class Title extends React.Component {
         );
     }
 }
-module.exports = Title;
