@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from './head.jsx';
+import Head from '../components/head.jsx';
 
 const DefaultLayout = React.createClass({
   render() {

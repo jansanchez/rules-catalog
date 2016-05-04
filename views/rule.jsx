@@ -1,7 +1,7 @@
 import React from 'react'
-import DefaultLayout from './layout.jsx';
-import Header from './header.jsx';
-import Footer from './footer.jsx';
+import DefaultLayout from './layouts/layout.jsx';
+import Header from './components/header.jsx';
+import Footer from './components/footer.jsx';
 
 //import Categories from '../source/components/categories/Categories.js';
 import rules from '../public/json/rules_catalog.json';

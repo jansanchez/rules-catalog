@@ -1,5 +1,5 @@
 import React from 'react';
-const config = require('../configuration');
+const config = require('../../configuration');
 const baseUrl = `${config.domain}:${config.port}/`;
 
 const Link = React.createClass({
