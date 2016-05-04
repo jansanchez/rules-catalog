@@ -1,11 +1,11 @@
-var React = require('react');
-var Head = require('./head.jsx');
+import React from 'react';
+import Head from './head.jsx';
 
-var DefaultLayout = React.createClass({
-  render: function() {
+const DefaultLayout = React.createClass({
+  render() {
     return (
         <html>
-            <Head />
+            <Head title={this.props.title} />
         <body>
             {this.props.children}
         </body>

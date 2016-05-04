@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-var Header = React.createClass({
-  render: function() {
+const Header = React.createClass({
+  render() {
     return (
         <header className="site-header">
           <nav role="navigation" className="navbar navbar-default">

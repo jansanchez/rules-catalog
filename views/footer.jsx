@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-var Footer = React.createClass({
-  render: function() {
+const Footer = React.createClass({
+  render() {
     return (
             <footer className="site-footer">
               <div className="container">
